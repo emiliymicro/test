@@ -1,13 +1,152 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Document</title>
-</head>
-<body>
-  <p>多喝水計算機 </p>
-請輸入你的體溫  <input type="text" id="height1" /> (35℃～37.5℃) <br><br>
+<html lang="zh-Hant" manifest="index.appcache">
+    <head>
+    	 <title>多喝水計算機｜計算Pro</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="title" content="多喝水計算機｜計算Pro" />
+        <meta name="description" content="這是一個好用的多喝水計算機" />
+        <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <Meta http-equiv="Expires" Content="0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-touch-fullscreen" content="yes">
+        <meta property="og:image" content="https://c1.staticflickr.com/8/7013/27220102200_bf70161cd0_c.jpg"/>
+	<meta property="og:title" content="多喝水計算機｜計算Pro" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://water.0123456789.tw/" />
+	<meta property="og:site_name" content="多喝水計算機｜計算Pro" />
+	<meta property="fb:app_id" content="197011163651329" />
+	<meta property="og:description" content="這是一個好用的多喝水計算機"/>
 
-<input type="button" value="計算" onclick="BMI()"/>
-</body>
+
+ <style type="text/css"> 
+body {
+background-color: #f7f7f7;
+
+  text-align: center;
+  padding-top: 20px;
+  
+}
+
+#container {
+	margin: auto;
+	position: relative;
+	padding: 0;
+	text-align: center;
+	width: 100%;
+	max-width: 750px;
+	font-family: "微軟正黑體", "新細明體";
+	font-size: 14pt;
+
+	}
+.formc4water {
+	font-family: "微軟正黑體", "新細明體";
+	font-size: 55px;
+	color: #3a342d;
+	text-align: center;
+	border-top-width: 3px;
+	border-right-width: 3px;
+	border-bottom-width: 3px;
+	border-left-width: 3px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-top-color: #3a342d;
+	border-right-color: #3a342d;
+	border-bottom-color: #3a342d;
+	border-left-color: #3a342d;
+	font-weight: normal;
+	height: 60px;
+	width: 25%;
+}
+
+.formc1water {
+	font-family: "微軟正黑體", "新細明體";
+	font-size: 60px;
+	color: #3a342d;
+	text-align: center;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #3a342d;
+	border-right-color: #3a342d;
+	border-bottom-color: #3a342d;
+	border-left-color: #3a342d;
+	font-weight: normal;
+	height: 80px;
+	width: 95%;
+}
+.formc5water {
+	font-family: "微軟正黑體", "新細明體";
+	font-size: 28px;
+	color: #cc0000;
+	border-top-width: 3px;
+	border-right-width: 3px;
+	border-bottom-width: 3px;
+	border-left-width: 3px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-top-color: #3a342d;
+	border-right-color: #3a342d;
+	border-bottom-color: #3a342d;
+	border-left-color: #3a342d;
+	font-weight: normal;
+	height: 50px;
+	width: 100%;
+	max-width: 400px;
+}
+.stylewater19 {
+	font-size: 28px;
+	font-family: "微軟正黑體", "新細明體";
+	color: #0000FF;
+	
+	text-decoration:none
+	
+}
+	</style>
+
+ <script type="text/javascript">
+function calc(fObj)
+{ 
+var yourkg=document.form2.num.value;
+var cc=document.form2.num2.value;
+
+var a95=Math.round((((yourkg*2.2)/2)/15)*450);
+
+var a96=Math.round((yourkg*15)+(200*(cc-36.8)));
+
+
+
+document.form2.result1.value ="你一天需要 "+a95+" ml的水";
+document.form2.result2.value ="此體溫水分蒸發量 "+a96+" ml的水";
+
+}
+function clears(){
+document.form2.num.value ="";
+}
+function clears2(){
+document.form2.num.value ="";
+document.form2.num2.value ="";
+}
+function clears3(){
+document.form2.num2.value ="";
+}
+function myKeyDown(e) {
+  var keycode;
+  if (window.event) keycode=window.event.keyCode;
+  else if (e) keycode = e.which;
+  if (keycode==13) {
+    calc(document.form2);
+  }
+}
+document.onkeydown = myKeyDown;
+//-->
+</script>
 </html>
